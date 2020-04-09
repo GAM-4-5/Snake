@@ -3,3 +3,5 @@ Snkae se prvi put pojavio 1997. na Nokii 6110 kao jedna od tri moguće igrice na
 
 Napredak projekta:
   - podsjećivanje kako funkcionira Tkinter
+  - napravljen jednostavan kalkulator 
+  - ponavljanje canvasa

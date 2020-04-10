@@ -4,11 +4,11 @@ Snkae se prvi put pojavio 1997. na Nokii 6110 kao jedna od tri moguće igrice na
 
 | Snake           | Trenutačno stanje |
 |----------------|---------------|
-| - podjećivanje kako funkcionira Tkinter | in progress |
+| - podjećivanje kako funkcionira Tkinter | :heavy_check_mark: |
 | - kalkulator u Tkinteru kao vježba | :heavy_check_mark: |
-| - ponavljanje animacija | in progress |
+| - ponavljanje animacija | :heavy_check_mark: |
 | - ponavljanje canvasa | :heavy_check_mark: |
-| - ustvari započivanje rada na projektu | pending |
+| - ustvari započivanje rada na projektu | in progress |
 | - Start Menu | pending |
 | - Igra | pending |
 | - Leaderboard | pending |

@@ -8,7 +8,7 @@ Snkae se prvi put pojavio 1997. na Nokii 6110 kao jedna od tri moguće igrice na
 | - kalkulator u Tkinteru kao vježba | :heavy_check_mark: |
 | - ponavljanje animacija | :heavy_check_mark: |
 | - ponavljanje canvasa | :heavy_check_mark: |
-| - ustvari započivanje rada na projektu | in progress |
+| - ustvari započivanje rada na projektu | :heavy_check_mark: |
 | - Start Menu | pending |
-| - Igra | pending |
+| - Igra | in progress |
 | - Leaderboard | pending |

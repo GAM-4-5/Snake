@@ -12,4 +12,4 @@ Snkae se prvi put pojavio 1997. na Nokii 6110 kao jedna od tri moguće igrice na
 | - Start Menu | pending |
 | - Igra | :heavy_check_mark: |
 | - Leaderboard | pending |
-| - Osposobljavanje provjeravanja međusobnih kolizija (da ne dođe odmah game over kad se ta funkcija pozove)| in progress |
+| - Osposobljavanje provjeravanja međusobnih kolizija ("checkCollisions2", da ne dođe odmah game over kad se ta funkcija pozove)| in progress |

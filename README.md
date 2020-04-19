@@ -9,7 +9,7 @@ Snkae se prvi put pojavio 1997. na Nokii 6110 kao jedna od tri moguće igrice na
 | - ponavljanje animacija | :heavy_check_mark: |
 | - ponavljanje canvasa | :heavy_check_mark: |
 | - ustvari započivanje rada na projektu | :heavy_check_mark: |
-| - Start Menu | pending |
+| - Mogućnost ponovnog pokretanja igre | :heavy_check_mark: |
 | - Igra | :heavy_check_mark: |
-| - High Score | pending |
 | - Osposobljavanje provjeravanja međusobnih kolizija ("checkCollisions2", da ne dođe odmah game over kad se ta funkcija pozove)| :heavy_check_mark: |
+| - Prezentacija | pending |

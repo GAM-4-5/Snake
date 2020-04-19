@@ -20,7 +20,7 @@ class konst:
     HEIGHT = 600
     DELAY = 100
     DOT_SIZE = 20
-    MAX_RAND_POS = 27
+    MAX_RAND_POS = 29
 
 class Board(Canvas):
     def __init__(self):

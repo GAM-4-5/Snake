@@ -1,7 +1,6 @@
 from tkinter import *
 import random
 import time
-from sys import *
 
 def main():
     root = Tk()
@@ -20,7 +19,7 @@ class konst:
     WIDTH = 600
     HEIGHT = 600
     DELAY = 100
-    DOT_SIZE = 10
+    DOT_SIZE = 20
     MAX_RAND_POS = 27
 
 class Board(Canvas):
@@ -118,6 +117,7 @@ class Board(Canvas):
         dots = self.find_withtag("dot")      
 
         x1, y1, x2, y2 = self.bbox(head)
+        x1, y1, x2, y2 = x1 + 10, y1 + 10, x2 - 10, y2 - 10
         overlap = self.find_overlapping(x1, y1, x2, y2)
 
         for i in dots:
@@ -151,6 +151,7 @@ class Board(Canvas):
     def onTimer(self):
         self.drawScore()
         self.checkCollision1()
+        self.checkCollision2()
 
         if self.inGame == True:
             self.checkFoodCollision()
@@ -166,7 +167,18 @@ class Board(Canvas):
     def gameOver(self):
         self.delete(ALL)
         self.create_text(self.winfo_width()/2, self.winfo_height()/2, text = "Game over with score {0}".format(self.score), fill = "white")
+        self.bind_all("<Key>", self.onKeyPressed2)
+    
+    def onKeyPressed2(self, e):
+        key = e.keysym
+        LeftKey = "Left"
+        RightKey = "Right"
+        UpKey = "Up"
+        DownKey = "Down"
 
+        if key == LeftKey or key == RightKey or key == UpKey or key == DownKey :
+            self.destroy()
+            Snake()
 main()
 
 

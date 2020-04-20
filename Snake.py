@@ -3,14 +3,8 @@ import random
 import time
 
 
-def main(): ##Glavna naredba preko koje se pokrene igrica
-    root = Tk()
-    Snake () ##pozvana klasa koja opisuje kako da se napravi taj prozor
-    root.resizable(False, False) ##onemugućavanje mijenjenje veličine prozora
-    root.wm_attributes("-topmost", 1)
-    root.mainloop()
 
-class Snake (Frame): ##opisana klasa Snake 
+class Snake (Frame): ##opisana klasa Snake koja pokreće igricu
     def __init__(self):
         super().__init__()
         self.master.title("Snake")
@@ -184,11 +178,11 @@ class Board(Canvas): ##opisana funkcija board
 
 
 def mainMenu(): ##funkcija koja pokreće Main Menu
-    rootM = Tk()
+    root = Tk()
     MenuStyle()
-    rootM.resizable(False, False)
-    rootM.wm_attributes("-topmost", 1)
-    rootM.mainloop()
+    root.resizable(False, False)
+    root.wm_attributes("-topmost", 1)
+    root.mainloop()
 
 class MenuStyle (Frame):  ##klase koje opisuju Main Menu
     def __init__(self):
@@ -215,6 +209,6 @@ class Board2(Canvas):
 
         if key == LeftKey or key == RightKey or key == UpKey or key == DownKey :
             self.destroy()
-            main()
+            Snake()
 
 mainMenu() ##pozivanje funkcije koja pokreće cijeli program

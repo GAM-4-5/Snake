@@ -2,6 +2,7 @@ from tkinter import *
 import random
 import time
 
+
 def main():
     root = Tk()
     Snake ()
@@ -21,7 +22,7 @@ class konst:
     DELAY = 100
     DOT_SIZE = 20
     MAX_RAND_POS = 29
-
+    
 class Board(Canvas):
     def __init__(self):
         super().__init__(width = konst.WIDTH, height = konst.HEIGHT, background = "black", highlightthickness = 0)
@@ -54,7 +55,6 @@ class Board(Canvas):
     
     def createObjects(self):
         self.create_text(30,10, text = "Score: {0}".format(self.score), tag = "score", fill="white")
-        
         self.create_image(self.foodX, self.foodY, image = self.food, anchor = NW, tag = "food")
         
         self.create_image(50, 50, image = self.snake, anchor = NW, tag = "head")
@@ -117,7 +117,8 @@ class Board(Canvas):
         dots = self.find_withtag("dot")      
 
         x1, y1, x2, y2 = self.bbox(head)
-        x1, y1, x2, y2 = x1 + 10, y1 + 10, x2 - 10, y2 - 10
+        x1, y1, x2, y2 = x1 + 10, y1 + 10 , x2 - 10, y2 - 10 
+        
         overlap = self.find_overlapping(x1, y1, x2, y2)
 
         for i in dots:
@@ -152,6 +153,7 @@ class Board(Canvas):
         self.drawScore()
         self.checkCollision1()
         self.checkCollision2()
+       
 
         if self.inGame == True:
             self.checkFoodCollision()
@@ -163,10 +165,11 @@ class Board(Canvas):
     def drawScore(self):
         score = self.find_withtag("score")
         self.itemconfigure(score, text = "Score: {0}".format(self.score))
+        
     
     def gameOver(self):
         self.delete(ALL)
-        self.create_text(self.winfo_width()/2, self.winfo_height()/2, text = "Game over with score {0}".format(self.score), fill = "white")
+        self.create_text(self.winfo_width()/2, self.winfo_height()/2, text = "Game over with score {0}, to play again press any of the arrow keys.".format(self.score), fill = "white")     
         self.bind_all("<Key>", self.onKeyPressed2)
     
     def onKeyPressed2(self, e):
@@ -179,8 +182,40 @@ class Board(Canvas):
         if key == LeftKey or key == RightKey or key == UpKey or key == DownKey :
             self.destroy()
             Snake()
-main()
 
 
+def mainMenu():
+    rootM = Tk()
+    MenuStyle()
+    rootM.resizable(False, False)
+    rootM.wm_attributes("-topmost", 1)
+    rootM.mainloop()
 
+class MenuStyle (Frame):
+    def __init__(self):
+        super().__init__()
+        self.master.title("Main Menu")
+        self.board = Board2()
 
+class Board2(Canvas):
+    def __init__(self):
+        super().__init__(width = konst.WIDTH, height = konst.HEIGHT, background = "black", highlightthickness = 0)
+        self.pack()
+        self.bind_all("<Key>", self.onKeyPressed3)
+        self.createObjects2()
+
+    def createObjects2(self):
+        self.create_text(300, 300, text = "Welcome to the game of Snake, if you want to start playing press any of the arrow keys.", fill = "white")
+    
+    def onKeyPressed3(self, e):
+        key = e.keysym
+        LeftKey = "Left"
+        RightKey = "Right"
+        UpKey = "Up"
+        DownKey = "Down"
+
+        if key == LeftKey or key == RightKey or key == UpKey or key == DownKey :
+            self.destroy()
+            main()
+
+mainMenu()

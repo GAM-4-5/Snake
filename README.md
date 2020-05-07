@@ -15,4 +15,4 @@ Snkae se prvi put pojavio 1997. na Nokii 6110 kao jedna od tri moguće igrice na
 | - Main Menu | :heavy_check_mark: |
 | - Debug Main Menua | :heavy_check_mark: |
 | - Dokumentacija | :heavy_check_mark: |
-| - Screencast | pending |
+| - Screencast | :heavy_check_mark: |
